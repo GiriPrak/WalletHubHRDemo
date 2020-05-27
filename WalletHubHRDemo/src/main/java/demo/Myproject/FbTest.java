@@ -1,7 +1,5 @@
 package demo.Myproject;
 
-import java.util.List;
-
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -18,7 +16,7 @@ public class FbTest extends UtilClass {
 	public void verifyFBCase() throws Exception {
 
 		try {
-			String usrName = "giri.araveti@avaamo.com", password = "******";
+			String usrName = "giri.araveti@avaamo.com", password = "Pa$$@FB123";
 			driver.get("https://www.facebook.com");
 			testReport = extent.createTest("verifyFBCase");
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email"))).sendKeys(usrName);
@@ -58,11 +56,11 @@ public class FbTest extends UtilClass {
 		testReport.log(Status.PASS, "Logged  out of FB");
 	}
 	
-	@Test
+	@Test(enabled=false)
 	public void verifyWalletHub() throws Exception {
 		testReport = extent.createTest("verifyWalletHub");
 
-		String usrName="giri.rvt@gmail.com", password="*******";
+		String usrName="giri.rvt@gmail.com", password="Pa$$@FB123";
 		String MyText="WalletHub’s brain performs three primary functions, providing: 1) Customized credit-improvement advice; 2) Personalized savings alerts; and 3) 24/7 wallet surveillance, and is based in Washington, DC.";
 
 		try {
@@ -114,6 +112,11 @@ public class FbTest extends UtilClass {
 
 		
 		
+
+	}
+	
+	public void verifyWalletHubNG() throws Exception {
+		testReport = extent.createTest("verifyWalletHub NG nx");
 
 	}
 }
