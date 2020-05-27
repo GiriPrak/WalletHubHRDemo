@@ -16,7 +16,7 @@ public class FbTest extends UtilClass {
 	public void verifyFBCase() throws Exception {
 
 		try {
-			String usrName = "giri.araveti@avaamo.com", password = "Pa$$@FB123";
+			String usrName = "*****", password = "****";
 			driver.get("https://www.facebook.com");
 			testReport = extent.createTest("verifyFBCase");
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email"))).sendKeys(usrName);
